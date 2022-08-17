@@ -1,3 +1,2 @@
 ## demo
-
- [Live demo](https://waqarhabib.github.io/LabeesAngularDemo)
+[Live demo](https://waqarhabib.github.io/LabeesAngularDemo)
