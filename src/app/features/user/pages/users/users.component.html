@@ -1,0 +1,31 @@
+<mat-card class="mb10 p0">
+    <mat-card-header class="pt10 pl5 pb5 pr5" style="border-bottom:1px solid gainsboro;">
+        <mat-icon style="font-size: 20px;">dashboard</mat-icon>
+        Users
+    </mat-card-header>
+    <mat-card-content class="pt15 pb10 pr5 inset-shadow">
+        <p class="ml20">Total Users: {{users?.length ?? 0 }}</p>
+    </mat-card-content>
+</mat-card>
+<div class="user-wrapper">
+    <mat-card class="user-card" *ngFor="let user of users; let odd = odd; let even = even">
+        <div class="img-wrapper">
+            <img *ngIf="even" src="assets/images/women.png">
+            <img *ngIf="odd" src="assets/images/man.png">
+        </div>
+        <div class="noti-count">
+            <mat-icon style="margin-left: 3px;">send</mat-icon>
+        </div>
+        <mat-card-title style="padding-top:50px; color: #1976d2">{{user?.name}}</mat-card-title>
+        <mat-card-content>
+            <p> {{user?.company?.bs}} </p>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+
+<mat-card class="mb10" *ngIf="!users?.length">
+    <mat-card-content>
+        <h4>Wait Data will soon</h4>
+    </mat-card-content>
+</mat-card>

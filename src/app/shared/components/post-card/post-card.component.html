@@ -1,0 +1,15 @@
+<mat-card class="card" *ngIf="!!post">
+    <div class="card-img">
+      <img mat-card-lg-image src="assets/images/oil-gas-rigs-vector-illustration.png">
+    </div>
+    <div class="card-details">
+      <mat-card-title-group>
+        <mat-card-title>{{post?.title}}</mat-card-title>
+        <mat-card-subtitle>Large</mat-card-subtitle>
+      </mat-card-title-group>
+      <mat-card-content>
+        {{post?.body}}
+      </mat-card-content>
+    </div>
+
+  </mat-card>

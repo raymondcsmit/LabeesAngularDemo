@@ -1,0 +1,40 @@
+<mat-card class="mb10 p0">
+  <mat-card-header class="pt10 pl5 pb5 pr5" style="border-bottom:1px solid gainsboro;">
+    <mat-icon style="font-size: 20px;">dashboard</mat-icon>
+    Dashboard
+  </mat-card-header>
+  <mat-card-content class="pt15 pb10 pr5 inset-shadow">
+    <p class="ml20">Home Page Description</p>
+  </mat-card-content>
+</mat-card>
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
+  <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
+    <app-stat [icon]="'bookmarks'" [count]="345" [label]="'Total Orders'"></app-stat>
+  </div>
+  <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
+    <app-stat [icon]="'view_list'" [count]="123" [label]="'Total Expenses'"></app-stat>
+  </div>
+  <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
+    <app-stat [icon]="'shopping_cart'" [count]="124" [label]="'Total Revenve'"></app-stat>
+  </div>
+  <div class="mb10" fxFlex="24" fxFlex.lt-lg="49">
+    <app-stat [icon]="'contact_support'" [count]="435" [label]="'New Users'"></app-stat>
+  </div>
+</div>
+<div class="mt5 mb5">
+  <mat-icon style="font-size: 20px;">view_list</mat-icon> <span style="font-size: 22px;">Recent Blogs</span>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between stretch" fxLayout.lt-md="column" fxLayoutGap="20px">
+  <mat-card fxFlex *ngFor="let item of places">
+    <img mat-card-image [src]="item.imgSrc">
+    <mat-card-header style="justify-content: center">
+      <mat-card-title>
+        <h3 class="m-0">{{item.name}}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{item.description}}
+    </mat-card-content>
+  </mat-card>
+</div>
